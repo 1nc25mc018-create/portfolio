@@ -533,3 +533,17 @@ div[class*="language"] p,
     line-height: 1.6 !important;
     list-style: none;
 }
+/* ==========================================
+   FORCE LANGUAGES TO A NEW, FULL-WIDTH ROW
+   ========================================== */
+div[class*="language"], 
+section[id*="language"], 
+section[class*="language"],
+.languages-section {
+    grid-column: 1 / -1 !important; /* Forces it out of grid columns */
+    width: 100% !important;          /* Makes it span the whole width */
+    clear: both !important;         /* Prevents other items from floating next to it */
+    display: block !important;      /* Changes it from inline-flex/grid to a standard block */
+    margin-top: 50px !important;    /* Adds clean space above it */
+    padding-left: 0 !important;     /* Aligns it perfectly with your left margin */
+}
