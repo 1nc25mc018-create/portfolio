@@ -492,3 +492,20 @@ footer {
         gap: 0.5rem;
     }
 }
+/* Add this at the very bottom of your style.css file */
+
+.languages-section, 
+#languages, 
+.skills-section {
+    height: auto !important;
+    min-height: max-content !important;
+    overflow: visible !important;
+    margin-top: 25px;
+    display: block;
+}
+
+.languages-section h2, 
+#languages h2 {
+    line-height: 1.4 !important;
+    padding-bottom: 10px;
+}
