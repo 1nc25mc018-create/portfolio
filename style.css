@@ -72,6 +72,8 @@ section {
     visibility: visible !important;
     opacity: 1 !important;
     transform: none !important;
+    height: auto !important;
+    overflow: visible !important;
 }
 
 .section-title {
@@ -82,6 +84,7 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    line-height: 1.3;
 }
 
 .section-title::after {
@@ -117,6 +120,8 @@ header {
     letter-spacing: -0.03em;
     text-decoration: none;
     color: var(--text-main);
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .nav-right {
@@ -167,6 +172,8 @@ header {
 #about {
     padding-top: 160px;
     padding-bottom: 60px;
+    height: auto !important;
+    overflow: visible !important;
 }
 
 .hero-grid {
@@ -492,20 +499,37 @@ footer {
         gap: 0.5rem;
     }
 }
-/* Add this at the very bottom of your style.css file */
 
-.languages-section, 
-#languages, 
-.skills-section {
+/* ==========================================
+   PERMANENT FIX FOR LANGUAGES OVERLAP
+   ========================================== */
+div[class*="language"], 
+section[id*="language"], 
+section[class*="language"],
+.languages-section {
+    display: block !important;
+    clear: both !important;
     height: auto !important;
-    min-height: max-content !important;
     overflow: visible !important;
-    margin-top: 25px;
-    display: block;
+    margin-top: 45px !important; 
+    margin-bottom: 35px !important;
 }
 
-.languages-section h2, 
-#languages h2 {
+div[class*="language"] h1,
+div[class*="language"] h2,
+.languages-section h2 {
+    font-size: 2rem !important;
     line-height: 1.4 !important;
-    padding-bottom: 10px;
+    height: auto !important;
+    margin-bottom: 1rem !important;
+    color: var(--text-main) !important;
+}
+
+div[class*="language"] li,
+div[class*="language"] p,
+.languages-section li {
+    color: var(--text-muted) !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    list-style: none;
 }
